@@ -1,0 +1,127 @@
+<html>
+<head>
+<script>
+function number(val){
+document.getElementById("res").value+=val
+}
+function clr(){
+document.getElementById("res").value = ""
+}
+function solve(){
+let x=document.getElementById("res").value
+let y=eval(x);
+document.getElementById("res").value=y
+}
+function square(){
+let x=document.getElementById("res").value
+let y=x*x;
+document.getElementById("res").value=y
+}
+function cube(){
+let x=document.getElementById("res").value
+let y=x*x*x;
+document.getElementById("res").value=y
+}
+function posorneg()
+{
+let x=document.getElementById("res").value
+if(x<0)
+{
+y=Math.abs(x)
+document.getElementById("res").value=y
+}
+}
+function fact()
+{
+let x=document.getElementById("res").value
+var y=1;
+for(var i=1;i<=x;i++)
+{
+y=y*i;
+}
+document.getElementById("res").value=y
+}
+function percentage()
+{
+let x=document.getElementById("res").value
+let y=x/100;
+document.getElementById("res").value=y
+}
+function sqrt()
+{
+let x=document.getElementById("res").value
+let y=Math.sqrt(x)
+document.getElementById("res").value=y
+}
+</script>
+<style> 
+         .title{ 
+         margin-bottom: 10px; 
+         text-align:center; 
+         width: 225px; 
+         color:black; 
+         border: solid black 2px; 
+         } 
+  
+         input[type="button"] 
+         { 
+         background-color:grey; 
+         color: black; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+      </style>
+</head>
+    <body> 
+      <div class = title >Calculator</div> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="res"/></td>
+            <td><input type="button" value="sqrt" onclick="sqrt()"/></td>
+ 	</tr>
+	<tr>
+            <td colspan="2"><input type="button" value="c" onclick="clr()"/> </td>
+	    <td colspan="2"><input type="button" value="%" onclick="percentage()"/></td> 
+         </tr>
+ 	<tr>
+	   <td><input type="button" value="x^2" onclick="square()"/></td>
+	   <td><input type="button" value="x^3" onclick="cube()"/></td>
+	   <td><input type="button" value="+/-" onclick="posorneg()"/></td>
+           <td><input type="button" value="n!" onclick="fact()"/></td>
+	   			
+	</tr> 
+         <tr> 
+            <td><input type="button" value="1" onclick="number('1')"/> </td> 
+            <td><input type="button" value="2" onclick="number('2')"/> </td> 
+            <td><input type="button" value="3" onclick="number('3')"/> </td> 
+            <td><input type="button" value="/" onclick="number('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="number('4')"/> </td> 
+            <td><input type="button" value="5" onclick="number('5')"/> </td> 
+            <td><input type="button" value="6" onclick="number('6')"/> </td> 
+            <td><input type="button" value="-" onclick="number('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="number('7')"/> </td> 
+            <td><input type="button" value="8" onclick="number('8')"/> </td> 
+            <td><input type="button" value="9" onclick="number('9')"/> </td> 
+            <td><input type="button" value="+" onclick="number('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="number('.')"/> </td> 
+            <td><input type="button" value="0" onclick="number('0')"/> </td> 
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="number('*')"/> </td> 
+         </tr>
+	
+      </table> 
+   </body> 
+</html>    
